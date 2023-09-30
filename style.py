@@ -546,11 +546,35 @@
 #     else False or value1 * value2 if operator == "*" else False or value1 / value2 if operator == "/" else False
 
 
-def find_average(numbers = [1,2,3]):
-    if numbers == []:
-        return []
-    return sum(numbers) // len(numbers) 
+# def find_average(numbers = [1,2,3]):
+#     if numbers == []:
+#         return []
+#     return sum(numbers) // len(numbers) 
         
 
+# print(find_average())
 
-print(find_average())
+
+
+
+# number = 1000
+# rounded_up = math.ceil(number / 100) * 100
+# print(rounded_up)
+
+# print(100 // 100)
+
+import math
+def century(year):
+    return (math.ceil(year / 100) * 100) // 100
+
+
+print(century(2001))
+  
+   
+    
+
+
+
+
+
+
