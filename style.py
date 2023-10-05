@@ -563,18 +563,235 @@
 
 # print(100 // 100)
 
-import math
-def century(year):
-    return (math.ceil(year / 100) * 100) // 100
+# import math
+# def century(year):
+#     return (math.ceil(year / 100) * 100) // 100
 
 
-print(century(2001))
-  
+# print(century(2001))
+# ///////////////////////////////////
+
+# def count_positives_sum_negatives(arr):
+#     pos = sum(1 for x in arr if x > 0)
+#     neg = sum(x for x in arr if x < 0)
+#     return [pos, neg] if len(arr) else []
+
+# /////////////////////////////////////
    
+# def count_positives_sum_negatives(arr):
+#     b = []
+#     d = []
+    
+#     for x in arr:
+#         if x > 1:
+#             b.append(x)
+#         elif x < 0:
+#             d.append(x)
+#         else:
+#             return []
+
+#     print([len(b), sum(d)])
+
+
+# count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
+
+# cap, on, wait = 100, 60, 50
+
+# def enough(cap, on, wait):
+#     # cap - мест в автобусе / on  - сколько сейчас / wait - сколько ждут
+#     x = on + wait
+#     i = x - cap
+#     return i
+    
+    
+
+# enough(cap, on, wait)
+
+
+
+# def first_non_consecutive(arr):
+#     i = 1
+#     try:
+
+
+#         for x in arr:
+        
+#             b = arr[i]
+#             if x  != b - 1:
+#                 return b
+#             else:
+#                 i += 1
+#     except:
+#         return None            
+
+
+# print(first_non_consecutive([1,2,3,4,6,7,8]))
+
+# arr = [1,2,3,4,5,6]
+
+
+# # for i, x in enumerate(arr[:-1]):
+# #     print(i,x)
+
+
+
+# x = ()
+# x = enumerate(arr[:-1])
+# print(x)
+
+# i = 1
+# while i < 6:
+#   print(i)
+#   i += 1
+
+
+# srt1 = "sadds"
+
+# print(len(srt1))
+
+
+# test1 = 'asdf'
+
+# if test1[2] == 'a' or test1[2] == 's':
+#     print('yes')
+# else:
+#     print('no')
+
+# .........................
+
+# def get_count(sentence):
+#     b = 0
+#     n = 0
+#     i = 0
+    
+#     while n <= len(sentence) - 1:  
+        
+#         for x in sentence[i]:
+
+#             if x == 'a' or x == 'e' or x == 'i' or x == 'o' or x == 'u':
+                
+#                 i += 1
+#                 b += 1
+#                 n += 1
+#             else:
+#                 i += 1
+#                 n += 1
+#     print(b)            
+    
+
+# get_count('abracadabra')
+
+
+# def get_count(sentence):
+#     b = 0      
+#     for x in sentence:
+#         if x == 'a' or x == 'e' or x == 'i' or x == 'o' or x == 'u':
+#             b += 1  
+#     print(b)            
+    
+
+# get_count('abracadabra')
+
+# ////////////////////////////////////////////////////////
+
+# def even_odd():
+#     even = [
+#         "even",
+#         "odd",
+#         "even",
+#         "odd",
+#         "even",
+#         "odd",
+#         "even",
+#     ]
+#     for odd in even:
+#         yield odd
+
+# counter = even_odd()
+# print(counter.__next__())
+# print(counter.__next__())
+# print(counter.__next__())
+# print(counter.__next__())
+# print(counter.__next__())
+
+# ////////////////////////////////////////////////////////////////////
+
+
+
+
+# def even_odd(x):
+#     while (x > 0):
+#         if x%2==0:
+#             yield 'even'
+#         else:
+#             yield 'odd'
+#         x -= 1
+
+
+# even_odd_generator = even_odd(4)
+# print(next(even_odd_generator))  # 'even'
+# print(next(even_odd_generator))  # 'odd'
+# print(next(even_odd_generator))  # 'even'
+# print(next(even_odd_generator))  # 'odd'
+
+
+
+# mass = [(123, 234), (534, 345)]
+
+# for x in mass:
+#     print(x[0])
+
+# data = [(11, 12), (60, 7), (30, 17), (56, 20), (46, 25), (60, 3), (58, 6)]
+
+# def open_or_senior(data):
+#     b = []
+#     for x in data:
+#         if x[0] >= 55 and x[1] >=7:
+#             b.append('Senior')
+#         else:
+#             b.append('Open')
+#     return b
+
+
+
+# print(open_or_senior(data))
+
+
+
+# .....................................
+# a = '1234'
+
+# if len(a) == 4:
+#  return True if len(pin) == 4 or len(pin) == 6 else False
+
+# def validate_pin(pin):
+#     b = []
+#     c = []
+#     for x in pin:
+#         if x == '-' or x == '.' or x == 'a' or x == '+' or x == ' ':
+#             c.append(x)
+#         elif len(pin) == 4 or len(pin) == 6:
+#             b.append(x)
+#         else:
+#             c.append(x)
+#     return True if len(b) == 4 or len(b) == 6 else False
+
+
+
+# print(validate_pin('09876 '))
+text = "samurai"
+print(text[-4])
+
+
+
+# def solution(text, ending):
+#     d = len(ending)
+#     try:
+#         return True if text[d - d*2] == ending[d - d*2] else False
+#     except:
+#         return False
     
 
 
 
-
-
-
+# print(solution("samurai", "ai"))
