@@ -779,15 +779,15 @@
 
 
 # print(validate_pin('09876 '))
-text = "samurai"
-print(text[-4])
+# text = "samurai"
+# print(text[-4])
 
 
 
 # def solution(text, ending):
 #     d = len(ending)
 #     try:
-#         return True if text[d - d*2] == ending[d - d*2] else False
+#         return True if text[(d - d*2)] == ending[d - d*2] else False
 #     except:
 #         return False
     
@@ -795,3 +795,212 @@ print(text[-4])
 
 
 # print(solution("samurai", "ai"))
+
+
+
+# def print_args(func):
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         print("args:", args)
+#         print("kwargs:", kwargs)
+#         return func(*args, **kwargs)
+#     return wrapper
+
+
+# @print_args
+# def some_func():
+#     print('Some code')
+
+
+# some_func(123, 32)
+
+
+# def hello_from_decorator(func):
+#     def printing(*args, **kwargs, ):
+#         func()
+#         print("Hello from decorator!")
+        
+#     return printing
+
+
+
+# @hello_from_decorator
+# def some_func():
+#     print('Hello')
+
+
+# some_func()
+
+
+# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+# l = [12, 5, '2', '6', 1, 'as']
+
+# def filter_list(l):
+#     b = []
+#     for x in l:
+#         if str(x) == x:
+#             pass
+#         else:
+#             b.append(x)
+#     return b
+
+
+
+# print(filter_list(l))
+
+# b = [1, 2, 3, 4, 5]
+
+# print(*b)
+
+# s = [5, 8, 12, 18, 22]
+
+
+# one_min = min(s)
+
+# s.remove(one_min)
+
+
+
+# print(s)
+# two_min = min(s)
+
+# print(two_min)
+
+# def sum_two_smallest_numbers(s):
+#     one_minn = min(s)
+#     s.remove(one_minn)
+#     two_min = min(s)
+#     s.remove(two_min)
+#     return one_minn + two_min
+
+
+# print(sum_two_smallest_numbers(s))
+
+# ////////////////////////////////////////////////////
+
+
+# str = "pythonist"
+# print ("Исходная строка: " + str) 
+# res_str = str.replace('t', '') 
+# # Удаление всех 't' 
+# print("Строка после удаления всех символов t: " + res_str) 
+# # Удаление только первой t 
+# res_str = str.replace('t', '', 1) 
+# print ("Строка после удаления первого t: " + res_str)
+
+# def remove_exclamation_marks(s):
+
+#     x = s.split("!")
+#     return x
+
+
+# print(remove_exclamation_marks(s))
+# txt = "welcome to the jungle!"
+
+# x = txt.split("!")
+
+# print(x)
+
+
+# //////////////////////////////////////////////////////////////////////
+
+
+# import numpy as np
+# import pandas as pd
+
+
+# df = pd.read_csv('./students.csv', sep=',', header=None, nrows=10)
+# df1 = pd.DataFrame(df)
+
+# # # Вывести первые 3 строчки
+# # print(df1.head(3))
+# # # вывести последнии 2 строчки
+# # print(df1.tail(2))
+# # # уникальные, количество их, частота
+# # print(df.describe())
+# # # Размер тут 5 на 5
+# # print(df.shape)
+# # # Количество элементов
+# # print(df.size)
+# # df.loc - с метками
+# # df.iloc - с строками
+# # df.mean() - среднее значение
+# print(df1[2])
+
+# print(pd.concat([df, df], axis=1))
+# print(df1['Age'].plot.hist())
+
+# /////////////////////////////////////////////////////////////////////////
+
+
+# s = 'AAAAAAABBBBBBCCCCCCDDDDDD'
+
+
+
+
+
+
+# x = 'aaaabbbaccccdd'
+# y = []
+# for i in x :
+#     if i not in y:
+#         y.append(i)
+# print(y)
+
+# def make_compliment(func):
+#     def wrapper():
+#         print('213213213')
+#         func()
+#         print('0000000')
+#     return wrapper
+
+# @make_compliment
+# def how_do_you():
+#     print('Hello')
+
+
+# how_do_you()
+
+
+# import csv
+
+# with open('students.csv') as file:
+#     csv_reader = csv.reader(file)
+#     next(csv_reader)
+#     for students in csv_reader:
+#         print(f'{students[1]} {students[2] } dfgdfgdfgdfg {students[4]}')
+
+
+# def find_short(s):
+#     d = s.split()
+#     lenght = len(d)
+#     i = []
+#     for x in d:
+#         i.append(len(x))
+#     return min(i)
+
+
+def find_next_number(n):
+    # Преобразуем число в строку, чтобы работать с его цифрами
+    n_str = str(n)
+    
+    # Сортируем цифры в строке
+    sorted_digits = sorted(n_str)
+    
+    # Ищем следующее положительное число, содержащее те же цифры
+    next_number = n + 1
+    while True:
+        next_str = str(next_number)
+        
+        # Если отсортированные цифры совпадают, и следующее число меньше или равно введенному числу, то это искомое число
+        if sorted(next_str) == sorted_digits and next_number <= n:
+            return next_number
+        
+        next_number += 1
+
+# Пример использования
+n = 123
+result = find_next_number(n)
+print(f"Следующее наименьшее число с теми же цифрами: {result}")
