@@ -1,11 +1,11 @@
 import requests
 import sqlite3
-# get_starttime = (input('starttime: '))
-# get_endtime = (input('endtime: '))
-# get_latitude = (input('latitude: '))
-# get_longitude = (input('longitude: '))
-# get_maxradiuskm = (input('maxradiuskm: '))
-# get_minmagnitude = (input('minmagnitude: '))
+get_starttime = (input('starttime: '))
+get_endtime = (input('endtime: '))
+get_latitude = (input('latitude: '))
+get_longitude = (input('longitude: '))
+get_maxradiuskm = (input('maxradiuskm: '))
+get_minmagnitude = (input('minmagnitude: '))
 
     # 'format':'geojson',
     # 'starttime':'2019-01-01',
